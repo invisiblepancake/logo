@@ -1,6 +1,6 @@
-# Mergify Logos
+# Mergify Logo
 
-This repository contains source files for Mergify logos.
+This repository contains source files for Mergify logo.
 
 For usage guidelines check https://mergify.io/logo
 
