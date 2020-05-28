@@ -1,0 +1,2 @@
+# logos
+Mergify Logos
