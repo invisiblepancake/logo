@@ -11,4 +11,4 @@ mergify-logo-title-horizontal-white.svg:
 	svgexport $< $@
 
 clean:
-	rm -f $(LOGO_BUILT)
+	rm -f $(LOGO_BUILT) logo.zip
