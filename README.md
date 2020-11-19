@@ -2,6 +2,10 @@
 
 This repository contains source files for Mergify logo.
 
+## Font
+
+The font used for the logo is [Poppins Semi-bold 600](https://fonts.google.com/specimen/Poppins?preview.text=Mergify&preview.text_type=custom&sidebar.open=true&selection.family=Poppins:wght@600).
+
 ## Usage
 
 You can build some alternative version from the master SVG. Simply type `make`.
