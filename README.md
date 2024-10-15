@@ -2,13 +2,17 @@
 
 This repository contains source files for Mergify logo.
 
-## Font
-
-The font used for the logo is [Poppins Semi-bold 600](https://fonts.google.com/specimen/Poppins?preview.text=Mergify&preview.text_type=custom&sidebar.open=true&selection.family=Poppins:wght@600).
-
 ## Usage
 
-You can build some alternative version from the master SVG. Simply type `make`.
+You can build some PNG version from the master SVG. Simply type `make`.
+
+The brand mark of Mergify can be used separately. As a digital-first company
+where brand recognition is important in various situations where space is
+limited, this brand mark can be used. We distinguish a primary version for
+regular use: such as the Mergiy logo within navigation of the platform, or for
+usage on social media profile images and more subtle marks in imagery or social
+media covers. The secondary version is used for very small sizes (such as a
+browser favicon at 40px or smaller).
 
 ## Guidelines
 
@@ -27,7 +31,8 @@ You can build some alternative version from the master SVG. Simply type `make`.
 
 ## License
 
-Mergify and the Mergify logo design are exclusive trademarks registered by Mergify SAS.
+Mergify and the Mergify logo design are exclusive trademarks registered by
+Mergify SAS.
 
 All rights reserved.
 

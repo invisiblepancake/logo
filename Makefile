@@ -1,17 +1,11 @@
-LOGO_BUILT=mergify-logo.png mergify-logo-title-horizontal.png mergify-logo-title-horizontal-white.svg mergify-logo-title-horizontal-white.png mergify-logo-title-vertical-white.svg mergify-logo-title-vertical-white.png
+LOGO_BUILT=mergify-black.png mergify-white.png mergify-brand-mark-black.png mergify-brand-mark-white.png
 
-logo.zip: mergify-logo.svg mergify-logo-title-horizontal.svg mergify-logo-title-vertical.svg $(LOGO_BUILT)
+logo.zip: mergify-black.svg mergify-white.svg mergify-brand-mark-black.svg mergify-brand-mark-white.svg $(LOGO_BUILT)
 	zip -r $@ $^
-
-mergify-logo-title-horizontal-white.svg:
-	sed 's/fill="#000000"/fill="#ffffff"/' mergify-logo-title-horizontal.svg > mergify-logo-title-horizontal-white.svg
-
-mergify-logo-title-vertical-white.svg:
-	sed 's/fill="#000000"/fill="#ffffff"/' mergify-logo-title-vertical.svg > mergify-logo-title-vertical-white.svg
 
 # npm install svgexport -g
 %.png: %.svg
-	svgexport $< $@
+	svgexport $< $@ png 100% "" 1024:
 
 clean:
 	rm -f $(LOGO_BUILT) logo.zip
