@@ -1,11 +1,23 @@
-LOGO_BUILT=mergify-black.png mergify-white.png mergify-brand-mark-black.png mergify-brand-mark-white.png
+SVG_FILES := $(wildcard *.svg)
+PNG_FILES := $(SVG_FILES:.svg=.png)
+ZIP_FILE := logo.zip
+SVGEXPORT := svgexport
 
-logo.zip: mergify-black.svg mergify-white.svg mergify-brand-mark-black.svg mergify-brand-mark-white.svg $(LOGO_BUILT)
+# Default target
+all: $(ZIP_FILE)
+
+# Rule to create the zip containing both SVG and PNG files
+$(ZIP_FILE): $(SVG_FILES) $(PNG_FILES)
+	@echo "Creating $@ with SVG and PNG files..."
 	zip -r $@ $^
 
-# npm install svgexport -g
+# Pattern rule to convert SVG to PNG
 %.png: %.svg
-	svgexport $< $@ png 100% "" 1024:
+	@echo "Converting $< to $@..."
+	$(SVGEXPORT) "$<" "$@" png 100% "" 1024:
 
+# Clean target to remove generated PNGs and the zip
+.PHONY: clean
 clean:
-	rm -f $(LOGO_BUILT) logo.zip
+	@echo "Cleaning up generated files..."
+	rm -f $(PNG_FILES) $(ZIP_FILE)
